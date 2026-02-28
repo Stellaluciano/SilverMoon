@@ -1,0 +1,32 @@
+{
+  "name": "silvermoon",
+  "version": "0.1.0",
+  "description": "Silvermoon personal AI life assistant MVP on OpenClaw",
+  "license": "Apache-2.0",
+  "type": "commonjs",
+  "main": "dist/silvermoon/cli/index.js",
+  "bin": {
+    "silvermoon": "dist/silvermoon/cli/index.js"
+  },
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "dev": "ts-node src/silvermoon/cli/index.ts start",
+    "start": "node dist/silvermoon/cli/index.js start",
+    "check": "tsc --noEmit -p tsconfig.json"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "dependencies": {
+    "better-sqlite3": "^9.6.0",
+    "dotenv": "^16.4.5",
+    "node-cron": "^3.0.3",
+    "openai": "^4.56.0"
+  },
+  "devDependencies": {
+    "@types/node": "^22.7.4",
+    "@types/node-cron": "^3.0.11",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.6.2"
+  }
+}
